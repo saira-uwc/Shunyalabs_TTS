@@ -9,11 +9,11 @@
  * 5. Copy the URL into .env as APPS_SCRIPT_URL=<url>
  *
  * HOW IT WORKS:
- *   POST  → pushes test results to "Test Results" + "Summary" sheets
+ *   POST  → pushes test results + uploads audio to Drive + creates links in sheet
  *   GET   → returns editable inputs from "Inputs" sheet as JSON
  *
- * To change test inputs: edit the "Inputs" sheet directly in Google Sheets.
- * Next time you run tests, it will pull inputs from there automatically.
+ * Audio files are saved to a shared "TTS_Test_Audio" folder in Google Drive.
+ * Anyone with the sheet link can click and listen to the audio output.
  */
 
 // ===== GET: Return test inputs from the "Inputs" sheet =====
@@ -30,9 +30,6 @@ function doGet(e) {
     }
 
     var data = ws.getDataRange().getValues();
-    // Row 0 = title, Row 1 = empty, Row 2 = headers: [Section, Key, Sub-Key, Voice, Text]
-    // Row 3+ = data rows
-
     var inputs = {};
     for (var i = 3; i < data.length; i++) {
       var section = String(data[i][0]).trim();
@@ -42,18 +39,14 @@ function doGet(e) {
       var text    = String(data[i][4]).trim();
 
       if (!section || !key) continue;
-
       if (!inputs[section]) inputs[section] = {};
 
       if (subKey) {
-        // Nested: e.g. batch.B-001.voice, batch.B-001.text
         if (!inputs[section][key]) inputs[section][key] = {};
         inputs[section][key][subKey] = (subKey === "voice") ? voice : text;
       } else if (voice) {
-        // Has voice + text: e.g. edge_cases.EC-001 = {voice, text}
         inputs[section][key] = { voice: voice, text: text };
       } else {
-        // Simple: e.g. formats.text = "..."
         inputs[section][key] = text;
       }
     }
@@ -70,12 +63,55 @@ function doGet(e) {
 }
 
 
-// ===== POST: Push test results + populate Inputs sheet =====
+// ===== Audio folder in Google Drive =====
+
+function getAudioFolder() {
+  var folderName = "TTS_Test_Audio";
+  var folders = DriveApp.getFoldersByName(folderName);
+  var folder;
+  if (folders.hasNext()) {
+    folder = folders.next();
+  } else {
+    folder = DriveApp.createFolder(folderName);
+  }
+  // Make folder accessible to anyone with link
+  folder.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+  return folder;
+}
+
+function uploadAudio(folder, testId, audioB64, mime, format) {
+  var ext = {
+    "audio/mpeg": "mp3", "audio/wav": "wav", "audio/pcm": "pcm",
+    "audio/ogg": "ogg", "audio/flac": "flac", "audio/basic": "raw"
+  }[mime] || format || "mp3";
+
+  var fileName = testId + "." + ext;
+
+  // Delete old file with same name if exists
+  var existing = folder.getFilesByName(fileName);
+  while (existing.hasNext()) {
+    existing.next().setTrashed(true);
+  }
+
+  var blob = Utilities.newBlob(Utilities.base64Decode(audioB64), mime, fileName);
+  var file = folder.createFile(blob);
+  file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+
+  return file.getId();
+}
+
+
+// ===== POST: Push test results + upload audio + populate Inputs sheet =====
 
 function doPost(e) {
   try {
     var data = JSON.parse(e.postData.contents);
     var ss = SpreadsheetApp.getActiveSpreadsheet();
+
+    // ---- Handle audio batch upload (phase 2) ----
+    if (data.action === "upload_audio") {
+      return handleAudioUpload(ss, data);
+    }
 
     var runTime = data.run_time || new Date().toISOString();
     var results = data.results || [];
@@ -87,16 +123,14 @@ function doPost(e) {
     var ws = getOrCreateSheet(ss, "Test Results");
     ws.clear();
 
-    // Title
     ws.getRange("A1").setValue("Shunyalabs TTS SDK - Test Report | Run: " + runTime)
       .setFontSize(14).setFontWeight("bold");
 
-    // Headers
     var headers = [
       "Test ID", "Category", "Sub-Category", "Test Name", "Description",
       "Input Text", "Input Config",
       "Status", "Latency (ms)", "Audio Size (bytes)", "Audio Duration (s)",
-      "Output Format", "Output File",
+      "Output Format", "Audio Link",
       "Error", "Notes",
       "Updated At"
     ];
@@ -108,7 +142,6 @@ function doPost(e) {
       .setFontColor("#FFFFFF")
       .setHorizontalAlignment("center");
 
-    // Data rows
     if (results.length > 0) {
       var dataRange = ws.getRange(headerRow + 1, 1, results.length, headers.length);
       dataRange.setValues(results.map(function(r) {
@@ -125,7 +158,7 @@ function doPost(e) {
           r.audio_bytes || "",
           r.audio_duration_sec || "",
           r.output_format || "",
-          r.output_file || "",
+          "",  // Audio Link — filled by audio batch upload
           r.error_message || "",
           r.notes || "",
           r.timestamp || ""
@@ -149,6 +182,7 @@ function doPost(e) {
       ws.getRange(headerRow + 1, 6, results.length, 1).setWrap(true);
       ws.setColumnWidth(6, 300);  // Input Text wider
       ws.setColumnWidth(7, 250);  // Input Config wider
+      ws.setColumnWidth(13, 100); // Audio Link
 
       // Summary row
       var summaryRow = headerRow + 1 + results.length + 1;
@@ -162,8 +196,7 @@ function doPost(e) {
       ws.getRange(summaryRow + 1, 16).setValue(runTime).setFontWeight("bold");
     }
 
-    // Auto-resize (skip input text/config columns since we set them manually)
-    var autoResizeCols = [1,2,3,4,5,8,9,10,11,12,13,14,15,16];
+    var autoResizeCols = [1,2,3,4,5,8,9,10,11,12,14,15,16];
     for (var ac = 0; ac < autoResizeCols.length; ac++) {
       ws.autoResizeColumn(autoResizeCols[ac]);
     }
@@ -189,7 +222,6 @@ function doPost(e) {
         return [c.name, c.total, c.pass, c.fail, c.error, c.pass_rate, c.avg_latency, runTime];
       }));
 
-      // Color pass rate
       for (var j = 0; j < cats.length; j++) {
         var rateCell = ws2.getRange(4 + j, 6);
         if (cats[j].pass_rate === "100%") {
@@ -201,7 +233,6 @@ function doPost(e) {
         }
       }
 
-      // Overall row
       var overallRow = 4 + cats.length + 1;
       ws2.getRange(overallRow, 1).setValue("OVERALL").setFontWeight("bold");
       ws2.getRange(overallRow, 2).setValue(summary.total || 0).setFontWeight("bold");
@@ -230,7 +261,7 @@ function doPost(e) {
     }
 
     return ContentService.createTextOutput(
-      JSON.stringify({ success: true, rows: results.length })
+      JSON.stringify({ success: true, rows: results.length, audio_uploaded: 0 })
     ).setMimeType(ContentService.MimeType.JSON);
 
   } catch (err) {
@@ -241,18 +272,59 @@ function doPost(e) {
 }
 
 
+// ===== Handle batched audio uploads (phase 2) =====
+
+function handleAudioUpload(ss, data) {
+  var audioFiles = data.audio_files || [];
+  var audioFolder = getAudioFolder();
+  var audioLinks = {};
+  var uploaded = 0;
+
+  for (var i = 0; i < audioFiles.length; i++) {
+    var af = audioFiles[i];
+    try {
+      var fileId = uploadAudio(audioFolder, af.test_id, af.audio_b64, af.audio_mime || "audio/mpeg", af.output_format);
+      audioLinks[af.test_id] = "https://drive.google.com/file/d/" + fileId + "/view";
+      uploaded++;
+    } catch (err) {
+      audioLinks[af.test_id] = "upload error: " + err.toString();
+    }
+  }
+
+  // Update Audio Link column (M = 13) in Test Results sheet
+  var ws = ss.getSheetByName("Test Results");
+  if (ws) {
+    var headerRow = 3;
+    var lastRow = ws.getLastRow();
+    if (lastRow > headerRow) {
+      var testIds = ws.getRange(headerRow + 1, 1, lastRow - headerRow, 1).getValues();
+      for (var r = 0; r < testIds.length; r++) {
+        var tid = String(testIds[r][0]).trim();
+        if (audioLinks[tid] && audioLinks[tid].indexOf("http") === 0) {
+          var cell = ws.getRange(headerRow + 1 + r, 13);
+          cell.setFormula('=HYPERLINK("' + audioLinks[tid] + '", "▶ Play")');
+          cell.setFontColor("#1a73e8").setFontWeight("bold");
+        }
+      }
+    }
+  }
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ success: true, audio_uploaded: uploaded })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+
 // ===== Populate the "Inputs" sheet with editable test inputs =====
 
 function populateInputsSheet(ss, inputsData) {
   var ws = getOrCreateSheet(ss, "Inputs");
   ws.clear();
 
-  // Title
   ws.getRange("A1").setValue("Edit test inputs below. Changes will be picked up on next test run.")
     .setFontSize(12).setFontWeight("bold").setFontColor("#1a73e8");
   ws.getRange("A1:E1").merge();
 
-  // Headers
   var headers = ["Section", "Key", "Sub-Key", "Voice", "Text"];
   var headerRange = ws.getRange(3, 1, 1, headers.length);
   headerRange.setValues([headers]);
@@ -261,28 +333,23 @@ function populateInputsSheet(ss, inputsData) {
     .setFontColor("#FFFFFF")
     .setHorizontalAlignment("center");
 
-  // Build flat rows from the nested JSON
   var rows = [];
 
-  // batch: {B-001: {voice, text}, ...}
   var batch = inputsData.batch || {};
   for (var bid in batch) {
     rows.push(["batch", bid, "", batch[bid].voice || "", batch[bid].text || ""]);
   }
 
-  // streaming: {S-001: {voice, text}, ...}
   var stream = inputsData.streaming || {};
   for (var sid in stream) {
     rows.push(["streaming", sid, "", stream[sid].voice || "", stream[sid].text || ""]);
   }
 
-  // voices: {Language: "text", ...}
   var voices = inputsData.voices || {};
   for (var lang in voices) {
     rows.push(["voices", lang, "", "", voices[lang] || ""]);
   }
 
-  // Simple text sections
   var simples = ["formats", "speed", "silence", "normalization", "timestamps", "background"];
   for (var si = 0; si < simples.length; si++) {
     var sec = simples[si];
@@ -291,13 +358,11 @@ function populateInputsSheet(ss, inputsData) {
     }
   }
 
-  // expressions: {Happy: "text", ...}
   var exprs = inputsData.expressions || {};
   for (var expr in exprs) {
     rows.push(["expressions", expr, "", "", exprs[expr] || ""]);
   }
 
-  // edge_cases: {EC-001: {voice, text}, ...}
   var ec = inputsData.edge_cases || {};
   for (var ecid in ec) {
     rows.push(["edge_cases", ecid, "", ec[ecid].voice || "", ec[ecid].text || ""]);
@@ -306,19 +371,11 @@ function populateInputsSheet(ss, inputsData) {
   if (rows.length > 0) {
     ws.getRange(4, 1, rows.length, 5).setValues(rows);
 
-    // Color-code sections for easy visual navigation
     var sectionColors = {
-      "batch": "#e8f5e9",
-      "streaming": "#e3f2fd",
-      "voices": "#fff3e0",
-      "formats": "#f3e5f5",
-      "speed": "#fce4ec",
-      "expressions": "#e0f7fa",
-      "silence": "#f1f8e9",
-      "normalization": "#fbe9e7",
-      "timestamps": "#e8eaf6",
-      "background": "#efebe9",
-      "edge_cases": "#fff8e1"
+      "batch": "#e8f5e9", "streaming": "#e3f2fd", "voices": "#fff3e0",
+      "formats": "#f3e5f5", "speed": "#fce4ec", "expressions": "#e0f7fa",
+      "silence": "#f1f8e9", "normalization": "#fbe9e7", "timestamps": "#e8eaf6",
+      "background": "#efebe9", "edge_cases": "#fff8e1"
     };
 
     for (var r = 0; r < rows.length; r++) {
@@ -328,7 +385,6 @@ function populateInputsSheet(ss, inputsData) {
       }
     }
 
-    // Wrap + widen text column
     ws.getRange(4, 5, rows.length, 1).setWrap(true);
     ws.setColumnWidth(5, 500);
     ws.setColumnWidth(1, 120);
@@ -337,12 +393,10 @@ function populateInputsSheet(ss, inputsData) {
     ws.setColumnWidth(4, 120);
   }
 
-  // Protect header rows
   var protection = ws.getRange("A1:E3").protect();
   protection.setDescription("Headers - do not edit");
   protection.setWarningOnly(true);
 
-  // Auto-resize section/key columns
   ws.autoResizeColumn(1);
   ws.autoResizeColumn(2);
 }
