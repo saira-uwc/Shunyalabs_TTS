@@ -1,0 +1,94 @@
+{
+  "_comment": "Edit any text below to change what gets tested. Just re-run: python tts_test_plan.py",
+
+  "batch": {
+    "B-001": { "voice": "Varun",   "text": "Hello, welcome to the Shunyalabs TTS testing suite." },
+    "B-002": { "voice": "Nisha",   "text": "Hello, this is the female English voice test." },
+    "B-003": { "voice": "Rajesh",  "text": "नमस्ते, यह हिंदी भाषा का परीक्षण है।" },
+    "B-004": { "voice": "Sunita",  "text": "नमस्ते, यह हिंदी महिला स्वर का परीक्षण है।" },
+    "B-005": { "voice": "Murugan", "text": "வணக்கம், இது தமிழ் மொழி சோதனை." },
+    "B-006": { "voice": "Varun",   "text": "This is a longer text to test the synthesis of extended content. The Shunyalabs TTS engine should be able to handle paragraphs of text without any issues. We are testing to make sure that the audio output is complete and does not cut off prematurely. This paragraph contains multiple sentences with varied punctuation, including commas, periods, and exclamation marks! Let us see how well it performs." }
+  },
+
+  "streaming": {
+    "S-001": { "voice": "Varun",  "text": "Testing WebSocket streaming with manual chunk collection." },
+    "S-002": { "voice": "Varun",  "text": "Testing detailed streaming mode with chunk metadata." },
+    "S-003": { "voice": "Varun",  "text": "This audio is streamed directly to a file." },
+    "S-004": { "voice": "Rajesh", "text": "यह स्ट्रीमिंग परीक्षण है हिंदी में।" },
+    "S-005": { "voice": "Nisha",  "text": "Testing streaming with a female English voice." }
+  },
+
+  "voices": {
+    "Assamese":   "নমস্কাৰ, এইটো এটা পৰীক্ষা।",
+    "Bengali":    "হ্যালো, এটি একটি পরীক্ষা।",
+    "Bodo":       "Hello, this is a test in Bodo voice.",
+    "Dogri":      "Hello, this is a test in Dogri voice.",
+    "English":    "Hello, this is a voice quality test.",
+    "Gujarati":   "હેલો, આ ગુજરાતી ભાષાની પરીક્ષા છે.",
+    "Hindi":      "नमस्ते, यह हिंदी भाषा का परीक्षण है।",
+    "Kannada":    "ಹಲೋ, ಇದು ಕನ್ನಡ ಭಾಷೆಯ ಪರೀಕ್ಷೆ.",
+    "Kashmiri":   "Hello, this is a test in Kashmiri voice.",
+    "Konkani":    "Hello, this is a test in Konkani voice.",
+    "Maithili":   "Hello, this is a test in Maithili voice.",
+    "Malayalam":  "ഹലോ, ഇത് മലയാളം പരീക്ഷണം ആണ്.",
+    "Manipuri":   "Hello, this is a test in Manipuri voice.",
+    "Marathi":    "हॅलो, ही मराठी भाषेची चाचणी आहे.",
+    "Nepali":     "नमस्ते, यो नेपाली भाषाको परीक्षण हो।",
+    "Odia":       "ହେଲୋ, ଏହା ଓଡିଆ ଭାଷାର ପରୀକ୍ଷା।",
+    "Punjabi":    "ਹੈਲੋ, ਇਹ ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਦੀ ਪਰੀਖਿਆ ਹੈ।",
+    "Sanskrit":   "नमस्ते, एतत् संस्कृत परीक्षणम् अस्ति।",
+    "Santali":    "Hello, this is a test in Santali voice.",
+    "Sindhi":     "Hello, this is a test in Sindhi voice.",
+    "Tamil":      "வணக்கம், இது தமிழ் மொழி சோதனை.",
+    "Telugu":     "హలో, ఇది తెలుగు భాషా పరీక్ష.",
+    "Urdu":       "ہیلو، یہ اردو زبان کا ٹیسٹ ہے۔"
+  },
+
+  "formats": {
+    "text": "Testing audio output format quality and encoding."
+  },
+
+  "speed": {
+    "text": "Testing speed control. This sentence is spoken at different speeds."
+  },
+
+  "expressions": {
+    "Happy":          "I am so happy today! Everything is going wonderfully well!",
+    "Sad":            "I feel so sad about what happened. It really hurts.",
+    "Angry":          "This is absolutely unacceptable! I am very angry!",
+    "Fearful":        "I am scared. Something doesn't feel right at all.",
+    "Surprised":      "Oh my goodness! I can't believe this just happened!",
+    "Disgust":        "That is absolutely disgusting. I cannot stand it.",
+    "News":           "Breaking news: A major discovery has been made today.",
+    "Conversational": "Hey, how are you doing? I was thinking about you.",
+    "Narrative":      "Once upon a time, in a land far away, there lived a sage.",
+    "Enthusiastic":   "This is incredible! I am so excited about this!",
+    "Neutral":        "The weather today will be partly cloudy with temperatures around 25 degrees."
+  },
+
+  "silence": {
+    "text": "Hello. This sentence has pauses. Testing silence trimming."
+  },
+
+  "normalization": {
+    "text": "Testing volume normalization for consistent loudness levels."
+  },
+
+  "timestamps": {
+    "text": "Hello world, this is a word timestamp test."
+  },
+
+  "background": {
+    "text": "This audio has background sound mixed in. Listen carefully."
+  },
+
+  "edge_cases": {
+    "EC-001": { "voice": "Varun",  "text": "Hello" },
+    "EC-002": { "voice": "Varun",  "text": "My phone number is 9876543210. The price is $99.99! Email: test@example.com" },
+    "EC-003": { "voice": "Varun",  "text": "Wait... really? Yes! No? Maybe... Hmm, I think so—but who knows?!" },
+    "EC-004": { "voice": "Rajesh", "text": "Hello bhai, कैसे हो? I hope all is well. चलो meeting start करते हैं।" },
+    "EC-005": { "voice": "Varun",  "text": "Minimum speed test." },
+    "EC-006": { "voice": "Varun",  "text": "Maximum speed test." },
+    "EC-007": { "voice": "Varun-Happy", "text": "Testing multiple features combined: speed, trim, WAV format, and normalization!" }
+  }
+}

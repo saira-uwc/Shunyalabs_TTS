@@ -1,0 +1,13 @@
+# Environment
+.env
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Output audio files & reports
+output/
+
+# OS
+.DS_Store
