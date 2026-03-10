@@ -748,6 +748,13 @@ def main():
     else:
         print("\n[Sheets] Skipped (--no-sheets flag)")
 
+    # Generate dashboard data
+    try:
+        import subprocess
+        subprocess.run([sys.executable, "generate_dashboard_data.py"], check=True)
+    except Exception as e:
+        print(f"[Dashboard] Could not generate data: {e}")
+
     if client:
         client.close()
 
