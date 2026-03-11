@@ -748,7 +748,7 @@ def main():
     else:
         print("\n[Sheets] Skipped (--no-sheets flag)")
 
-    # Generate dashboard data
+    # Generate dashboard data (after audio links are saved)
     try:
         import subprocess
         subprocess.run([sys.executable, "generate_dashboard_data.py"], check=True)
