@@ -197,6 +197,7 @@ body {
 .search-input:focus { border-color: var(--accent); }
 .search-input::placeholder { color: var(--text-dimmed); }
 table { width: 100%; border-collapse: collapse; }
+thead { position: sticky; top: 0; z-index: 10; }
 thead th {
   text-align: left; padding: 12px 16px; font-size: 12px;
   font-weight: 600; text-transform: uppercase; letter-spacing: .5px;
@@ -369,7 +370,7 @@ td a:hover { color: #a78bfa !important; text-decoration: underline !important; }
         </div>
         <input type="text" class="search-input" id="searchInput" placeholder="Search tests...">
       </div>
-      <div style="overflow-x:auto;">
+      <div style="overflow:auto;max-height:75vh;">
         <table>
           <thead>
             <tr>
