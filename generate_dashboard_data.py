@@ -11,6 +11,7 @@ from datetime import datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 REPORT_PATH = os.path.join(BASE, "output", "test_report.json")
+AUDIO_LINKS_PATH = os.path.join(BASE, "output", "audio_links.json")
 DATA_PATH = os.path.join(BASE, "docs", "data.json")
 
 
@@ -26,8 +27,16 @@ def load_existing_data():
     return {"runs": []}
 
 
-def build_run_entry(report):
+def load_audio_links():
+    if os.path.isfile(AUDIO_LINKS_PATH):
+        with open(AUDIO_LINKS_PATH, "r") as f:
+            return json.load(f)
+    return {}
+
+
+def build_run_entry(report, audio_links=None):
     """Build a single run entry from a test report."""
+    audio_links = audio_links or {}
     results = report.get("results", [])
 
     # Category breakdown
@@ -77,6 +86,7 @@ def build_run_entry(report):
             "output_format": r.get("output_format", ""),
             "error": r.get("error_message", ""),
             "notes": r.get("notes", ""),
+            "audio_url": audio_links.get(r["test_id"], ""),
         })
 
     total = report.get("total", len(results))
@@ -103,9 +113,10 @@ def build_run_entry(report):
 
 def main():
     report = load_report()
+    audio_links = load_audio_links()
     data = load_existing_data()
 
-    entry = build_run_entry(report)
+    entry = build_run_entry(report, audio_links)
 
     # Deduplicate by run_id (replace if same timestamp)
     data["runs"] = [r for r in data["runs"] if r["run_id"] != entry["run_id"]]

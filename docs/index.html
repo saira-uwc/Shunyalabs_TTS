@@ -218,6 +218,7 @@ tbody tr:last-child td { border-bottom: none; }
 .pill.fail { background: var(--red-soft); color: var(--red); }
 .pill.error { background: var(--amber-soft); color: var(--amber); }
 .mono { font-family: 'Fira Code', monospace; font-size: 12px; }
+td a:hover { color: #a78bfa !important; text-decoration: underline !important; }
 
 /* ===== Run History ===== */
 .history-stats {
@@ -374,7 +375,7 @@ tbody tr:last-child td { border-bottom: none; }
             <tr>
               <th>ID</th><th>Test Name</th><th>Category</th>
               <th>Status</th><th>Latency</th><th>Audio Size</th>
-              <th>Format</th><th>Notes</th>
+              <th>Format</th><th>Audio</th><th>Notes</th>
             </tr>
           </thead>
           <tbody id="testTableBody"></tbody>
@@ -600,6 +601,9 @@ function renderFilteredTable(tests) {
   tbody.innerHTML = tests.map(t => {
     const statusCls = t.status.toLowerCase();
     const size = t.audio_bytes > 1024 ? (t.audio_bytes / 1024).toFixed(1) + ' KB' : t.audio_bytes + ' B';
+    const audioLink = t.audio_url && t.audio_url.startsWith('http')
+      ? `<a href="${t.audio_url}" target="_blank" style="color:#8b5cf6;text-decoration:none;font-weight:600;">&#9654; Play</a>`
+      : '<span style="color:var(--text-dimmed)">—</span>';
     return `<tr>
       <td class="mono">${t.id}</td>
       <td>${t.name}</td>
@@ -608,6 +612,7 @@ function renderFilteredTable(tests) {
       <td class="mono">${t.duration_ms}ms</td>
       <td class="mono">${size}</td>
       <td style="color:var(--text-muted)">${t.output_format}</td>
+      <td>${audioLink}</td>
       <td style="color:var(--text-dimmed);font-size:12px">${t.error || t.notes || ''}</td>
     </tr>`;
   }).join('');

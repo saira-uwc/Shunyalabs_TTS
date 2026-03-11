@@ -171,8 +171,8 @@ def _collect_audio_files(suite: TestSuite) -> list[dict]:
     return audio_files
 
 
-def _upload_audio_batch(batch: list[dict], batch_num: int, total_batches: int) -> int:
-    """Upload a single batch of audio files. Returns count uploaded."""
+def _upload_audio_batch(batch: list[dict], batch_num: int, total_batches: int) -> tuple[int, dict]:
+    """Upload a single batch of audio files. Returns (count_uploaded, links_dict)."""
     payload = {
         "action": "upload_audio",
         "audio_files": batch,
@@ -193,20 +193,21 @@ def _upload_audio_batch(batch: list[dict], batch_num: int, total_batches: int) -
                 body = resp.json()
                 if body.get("success"):
                     count = body.get("audio_uploaded", 0)
+                    links = body.get("audio_links", {})
                     print(f"[Sheets]   Batch {batch_num} done — {count} files uploaded.")
-                    return count
+                    return count, links
                 else:
                     print(f"[Sheets]   Batch {batch_num} error: {body.get('error', 'unknown')}")
-                    return 0
+                    return 0, {}
             else:
                 print(f"[Sheets]   Batch {batch_num} HTTP {resp.status_code}: {resp.text[:200]}")
-                return 0
+                return 0, {}
         except Exception as e:
             print(f"[Sheets]   Batch {batch_num} attempt {attempt + 1} failed: {e}")
             if attempt < 2:
                 import time
                 time.sleep(5)
-    return 0
+    return 0, {}
 
 
 def push_results(suite: TestSuite, inputs: dict = None):
@@ -256,10 +257,20 @@ def push_results(suite: TestSuite, inputs: dict = None):
     print(f"\n[Sheets] Phase 2: Uploading {len(audio_files)} audio files in {total_batches} batches...")
 
     total_uploaded = 0
+    all_audio_links = {}
     for i in range(0, len(audio_files), AUDIO_BATCH_SIZE):
         batch = audio_files[i : i + AUDIO_BATCH_SIZE]
         batch_num = (i // AUDIO_BATCH_SIZE) + 1
-        total_uploaded += _upload_audio_batch(batch, batch_num, total_batches)
+        count, links = _upload_audio_batch(batch, batch_num, total_batches)
+        total_uploaded += count
+        all_audio_links.update(links)
+
+    # Save audio links for dashboard
+    if all_audio_links:
+        links_path = os.path.join(os.path.dirname(__file__), "output", "audio_links.json")
+        with open(links_path, "w") as f:
+            json.dump(all_audio_links, f, indent=2)
+        print(f"[Sheets] Audio links saved: {links_path} ({len(all_audio_links)} links)")
 
     print(f"\n[Sheets] Done! {total_uploaded}/{len(audio_files)} audio files uploaded to Drive.")
     print(f"[Sheets] View: https://docs.google.com/spreadsheets/d/1rbp45K3opTCTzb0-d0PTInJP7rUPdwAKDDnRS-ZkH0U")

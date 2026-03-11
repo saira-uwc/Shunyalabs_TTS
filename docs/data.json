@@ -3001,18 +3001,1624 @@
           "notes": "speed=1.5x, trim=on, wav, peak norm, happy expr"
         }
       ]
+    },
+    {
+      "run_id": "2026-03-11T12:42:14.712020",
+      "timestamp": "2026-03-11T12:42:14.712020",
+      "total": 105,
+      "passed": 105,
+      "failed": 0,
+      "errors": 0,
+      "pass_rate": 100.0,
+      "total_ms": 192941,
+      "avg_latency": 1838,
+      "categories": [
+        {
+          "name": "Batch Synthesis",
+          "total": 6,
+          "pass": 6,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 2749,
+          "min_latency": 1458,
+          "max_latency": 7048
+        },
+        {
+          "name": "Streaming Synthesis",
+          "total": 5,
+          "pass": 5,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 3888,
+          "min_latency": 3849,
+          "max_latency": 3914
+        },
+        {
+          "name": "Voices & Languages",
+          "total": 46,
+          "pass": 46,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 1555,
+          "min_latency": 1249,
+          "max_latency": 2376
+        },
+        {
+          "name": "Output Formats",
+          "total": 7,
+          "pass": 7,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 1448,
+          "min_latency": 1367,
+          "max_latency": 1528
+        },
+        {
+          "name": "Speed Control",
+          "total": 6,
+          "pass": 6,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 1941,
+          "min_latency": 1845,
+          "max_latency": 2018
+        },
+        {
+          "name": "Expression Styles",
+          "total": 11,
+          "pass": 11,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 1633,
+          "min_latency": 1402,
+          "max_latency": 1905
+        },
+        {
+          "name": "Silence Trimming",
+          "total": 2,
+          "pass": 2,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 1868,
+          "min_latency": 1861,
+          "max_latency": 1875
+        },
+        {
+          "name": "Volume Normalization",
+          "total": 3,
+          "pass": 3,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 1724,
+          "min_latency": 1721,
+          "max_latency": 1727
+        },
+        {
+          "name": "Word Timestamps",
+          "total": 2,
+          "pass": 2,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 2220,
+          "min_latency": 1366,
+          "max_latency": 3073
+        },
+        {
+          "name": "Background Audio",
+          "total": 10,
+          "pass": 10,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 1712,
+          "min_latency": 1660,
+          "max_latency": 1771
+        },
+        {
+          "name": "Edge Cases",
+          "total": 7,
+          "pass": 7,
+          "fail": 0,
+          "error": 0,
+          "pass_rate": 100.0,
+          "avg_latency": 2178,
+          "min_latency": 1026,
+          "max_latency": 4232
+        }
+      ],
+      "tests": [
+        {
+          "id": "B-001",
+          "name": "Batch: English Male (Varun)",
+          "category": "Batch Synthesis",
+          "subcategory": "Core",
+          "status": "PASS",
+          "duration_ms": 2999,
+          "audio_bytes": 54764,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "B-002",
+          "name": "Batch: English Female (Nisha)",
+          "category": "Batch Synthesis",
+          "subcategory": "Core",
+          "status": "PASS",
+          "duration_ms": 1534,
+          "audio_bytes": 46124,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "B-003",
+          "name": "Batch: Hindi Male (Rajesh)",
+          "category": "Batch Synthesis",
+          "subcategory": "Core",
+          "status": "PASS",
+          "duration_ms": 1653,
+          "audio_bytes": 51884,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "B-004",
+          "name": "Batch: Hindi Female (Sunita)",
+          "category": "Batch Synthesis",
+          "subcategory": "Core",
+          "status": "PASS",
+          "duration_ms": 1801,
+          "audio_bytes": 58796,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "B-005",
+          "name": "Batch: Tamil Male (Murugan)",
+          "category": "Batch Synthesis",
+          "subcategory": "Core",
+          "status": "PASS",
+          "duration_ms": 1458,
+          "audio_bytes": 40364,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "B-006",
+          "name": "Batch: Long text (500+ chars)",
+          "category": "Batch Synthesis",
+          "subcategory": "Core",
+          "status": "PASS",
+          "duration_ms": 7048,
+          "audio_bytes": 331244,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "S-001",
+          "name": "Stream: Manual chunk collection",
+          "category": "Streaming Synthesis",
+          "subcategory": "WebSocket",
+          "status": "PASS",
+          "duration_ms": 3901,
+          "audio_bytes": 44484,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "3 chunks",
+          "audio_url": ""
+        },
+        {
+          "id": "S-002",
+          "name": "Stream: Detailed mode (metadata)",
+          "category": "Streaming Synthesis",
+          "subcategory": "WebSocket",
+          "status": "PASS",
+          "duration_ms": 3914,
+          "audio_bytes": 45060,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "3 chunks, last is_final=True",
+          "audio_url": ""
+        },
+        {
+          "id": "S-003",
+          "name": "Stream: Direct to file",
+          "category": "Streaming Synthesis",
+          "subcategory": "WebSocket",
+          "status": "PASS",
+          "duration_ms": 3849,
+          "audio_bytes": 40408,
+          "audio_duration_sec": 2.32,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "status=complete, chunks=2",
+          "audio_url": ""
+        },
+        {
+          "id": "S-004",
+          "name": "Stream: Hindi voice",
+          "category": "Streaming Synthesis",
+          "subcategory": "WebSocket",
+          "status": "PASS",
+          "duration_ms": 3872,
+          "audio_bytes": 48516,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "3 chunks",
+          "audio_url": ""
+        },
+        {
+          "id": "S-005",
+          "name": "Stream: Female voice",
+          "category": "Streaming Synthesis",
+          "subcategory": "WebSocket",
+          "status": "PASS",
+          "duration_ms": 3905,
+          "audio_bytes": 55428,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "3 chunks",
+          "audio_url": ""
+        },
+        {
+          "id": "V-001",
+          "name": "Voice: Bimal (Assamese male)",
+          "category": "Voices & Languages",
+          "subcategory": "Assamese",
+          "status": "PASS",
+          "duration_ms": 2376,
+          "audio_bytes": 42668,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-002",
+          "name": "Voice: Anjana (Assamese female)",
+          "category": "Voices & Languages",
+          "subcategory": "Assamese",
+          "status": "PASS",
+          "duration_ms": 1438,
+          "audio_bytes": 36908,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-003",
+          "name": "Voice: Arjun (Bengali male)",
+          "category": "Voices & Languages",
+          "subcategory": "Bengali",
+          "status": "PASS",
+          "duration_ms": 1526,
+          "audio_bytes": 42092,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-004",
+          "name": "Voice: Priyanka (Bengali female)",
+          "category": "Voices & Languages",
+          "subcategory": "Bengali",
+          "status": "PASS",
+          "duration_ms": 1341,
+          "audio_bytes": 34604,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-005",
+          "name": "Voice: Daimalu (Bodo male)",
+          "category": "Voices & Languages",
+          "subcategory": "Bodo",
+          "status": "PASS",
+          "duration_ms": 1645,
+          "audio_bytes": 49004,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-006",
+          "name": "Voice: Hasina (Bodo female)",
+          "category": "Voices & Languages",
+          "subcategory": "Bodo",
+          "status": "PASS",
+          "duration_ms": 1445,
+          "audio_bytes": 40364,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-007",
+          "name": "Voice: Vishal (Dogri male)",
+          "category": "Voices & Languages",
+          "subcategory": "Dogri",
+          "status": "PASS",
+          "duration_ms": 1467,
+          "audio_bytes": 40940,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-008",
+          "name": "Voice: Neelam (Dogri female)",
+          "category": "Voices & Languages",
+          "subcategory": "Dogri",
+          "status": "PASS",
+          "duration_ms": 1492,
+          "audio_bytes": 42668,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-009",
+          "name": "Voice: Varun (English male)",
+          "category": "Voices & Languages",
+          "subcategory": "English",
+          "status": "PASS",
+          "duration_ms": 1279,
+          "audio_bytes": 32300,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-010",
+          "name": "Voice: Nisha (English female)",
+          "category": "Voices & Languages",
+          "subcategory": "English",
+          "status": "PASS",
+          "duration_ms": 1432,
+          "audio_bytes": 39212,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-011",
+          "name": "Voice: Rakesh (Gujarati male)",
+          "category": "Voices & Languages",
+          "subcategory": "Gujarati",
+          "status": "PASS",
+          "duration_ms": 1711,
+          "audio_bytes": 54188,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-012",
+          "name": "Voice: Pooja (Gujarati female)",
+          "category": "Voices & Languages",
+          "subcategory": "Gujarati",
+          "status": "PASS",
+          "duration_ms": 1583,
+          "audio_bytes": 47276,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-013",
+          "name": "Voice: Rajesh (Hindi male)",
+          "category": "Voices & Languages",
+          "subcategory": "Hindi",
+          "status": "PASS",
+          "duration_ms": 1674,
+          "audio_bytes": 51884,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-014",
+          "name": "Voice: Sunita (Hindi female)",
+          "category": "Voices & Languages",
+          "subcategory": "Hindi",
+          "status": "PASS",
+          "duration_ms": 1653,
+          "audio_bytes": 50732,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-015",
+          "name": "Voice: Kiran (Kannada male)",
+          "category": "Voices & Languages",
+          "subcategory": "Kannada",
+          "status": "PASS",
+          "duration_ms": 1475,
+          "audio_bytes": 42668,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-016",
+          "name": "Voice: Shreya (Kannada female)",
+          "category": "Voices & Languages",
+          "subcategory": "Kannada",
+          "status": "PASS",
+          "duration_ms": 1440,
+          "audio_bytes": 40940,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-017",
+          "name": "Voice: Farooq (Kashmiri male)",
+          "category": "Voices & Languages",
+          "subcategory": "Kashmiri",
+          "status": "PASS",
+          "duration_ms": 1693,
+          "audio_bytes": 50732,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-018",
+          "name": "Voice: Habba (Kashmiri female)",
+          "category": "Voices & Languages",
+          "subcategory": "Kashmiri",
+          "status": "PASS",
+          "duration_ms": 1545,
+          "audio_bytes": 46124,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-019",
+          "name": "Voice: Mohan (Konkani male)",
+          "category": "Voices & Languages",
+          "subcategory": "Konkani",
+          "status": "PASS",
+          "duration_ms": 1444,
+          "audio_bytes": 40940,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-020",
+          "name": "Voice: Sarita (Konkani female)",
+          "category": "Voices & Languages",
+          "subcategory": "Konkani",
+          "status": "PASS",
+          "duration_ms": 1408,
+          "audio_bytes": 38636,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-021",
+          "name": "Voice: Suresh (Maithili male)",
+          "category": "Voices & Languages",
+          "subcategory": "Maithili",
+          "status": "PASS",
+          "duration_ms": 1573,
+          "audio_bytes": 47852,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-022",
+          "name": "Voice: Meera (Maithili female)",
+          "category": "Voices & Languages",
+          "subcategory": "Maithili",
+          "status": "PASS",
+          "duration_ms": 1507,
+          "audio_bytes": 42668,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-023",
+          "name": "Voice: Krishnan (Malayalam male)",
+          "category": "Voices & Languages",
+          "subcategory": "Malayalam",
+          "status": "PASS",
+          "duration_ms": 1666,
+          "audio_bytes": 51884,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-024",
+          "name": "Voice: Deepa (Malayalam female)",
+          "category": "Voices & Languages",
+          "subcategory": "Malayalam",
+          "status": "PASS",
+          "duration_ms": 1531,
+          "audio_bytes": 45548,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-025",
+          "name": "Voice: Tomba (Manipuri male)",
+          "category": "Voices & Languages",
+          "subcategory": "Manipuri",
+          "status": "PASS",
+          "duration_ms": 1631,
+          "audio_bytes": 51308,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-026",
+          "name": "Voice: Ibemhal (Manipuri female)",
+          "category": "Voices & Languages",
+          "subcategory": "Manipuri",
+          "status": "PASS",
+          "duration_ms": 1522,
+          "audio_bytes": 44396,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-027",
+          "name": "Voice: Siddharth (Marathi male)",
+          "category": "Voices & Languages",
+          "subcategory": "Marathi",
+          "status": "PASS",
+          "duration_ms": 1754,
+          "audio_bytes": 57068,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-028",
+          "name": "Voice: Ananya (Marathi female)",
+          "category": "Voices & Languages",
+          "subcategory": "Marathi",
+          "status": "PASS",
+          "duration_ms": 1626,
+          "audio_bytes": 49004,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-029",
+          "name": "Voice: Bikash (Nepali male)",
+          "category": "Voices & Languages",
+          "subcategory": "Nepali",
+          "status": "PASS",
+          "duration_ms": 1809,
+          "audio_bytes": 59372,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-030",
+          "name": "Voice: Sapana (Nepali female)",
+          "category": "Voices & Languages",
+          "subcategory": "Nepali",
+          "status": "PASS",
+          "duration_ms": 1570,
+          "audio_bytes": 47276,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-031",
+          "name": "Voice: Bijay (Odia male)",
+          "category": "Voices & Languages",
+          "subcategory": "Odia",
+          "status": "PASS",
+          "duration_ms": 1525,
+          "audio_bytes": 44972,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-032",
+          "name": "Voice: Sujata (Odia female)",
+          "category": "Voices & Languages",
+          "subcategory": "Odia",
+          "status": "PASS",
+          "duration_ms": 1626,
+          "audio_bytes": 49580,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-033",
+          "name": "Voice: Gurpreet (Punjabi male)",
+          "category": "Voices & Languages",
+          "subcategory": "Punjabi",
+          "status": "PASS",
+          "duration_ms": 1550,
+          "audio_bytes": 46700,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-034",
+          "name": "Voice: Simran (Punjabi female)",
+          "category": "Voices & Languages",
+          "subcategory": "Punjabi",
+          "status": "PASS",
+          "duration_ms": 1629,
+          "audio_bytes": 50156,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-035",
+          "name": "Voice: Vedant (Sanskrit male)",
+          "category": "Voices & Languages",
+          "subcategory": "Sanskrit",
+          "status": "PASS",
+          "duration_ms": 1672,
+          "audio_bytes": 52460,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-036",
+          "name": "Voice: Gayatri (Sanskrit female)",
+          "category": "Voices & Languages",
+          "subcategory": "Sanskrit",
+          "status": "PASS",
+          "duration_ms": 1567,
+          "audio_bytes": 47276,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-037",
+          "name": "Voice: Chandu (Santali male)",
+          "category": "Voices & Languages",
+          "subcategory": "Santali",
+          "status": "PASS",
+          "duration_ms": 1441,
+          "audio_bytes": 40940,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-038",
+          "name": "Voice: Roshni (Santali female)",
+          "category": "Voices & Languages",
+          "subcategory": "Santali",
+          "status": "PASS",
+          "duration_ms": 1611,
+          "audio_bytes": 49580,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-039",
+          "name": "Voice: Amjad (Sindhi male)",
+          "category": "Voices & Languages",
+          "subcategory": "Sindhi",
+          "status": "PASS",
+          "duration_ms": 1488,
+          "audio_bytes": 43244,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-040",
+          "name": "Voice: Kavita (Sindhi female)",
+          "category": "Voices & Languages",
+          "subcategory": "Sindhi",
+          "status": "PASS",
+          "duration_ms": 1492,
+          "audio_bytes": 43244,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-041",
+          "name": "Voice: Murugan (Tamil male)",
+          "category": "Voices & Languages",
+          "subcategory": "Tamil",
+          "status": "PASS",
+          "duration_ms": 1424,
+          "audio_bytes": 40364,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-042",
+          "name": "Voice: Thangam (Tamil female)",
+          "category": "Voices & Languages",
+          "subcategory": "Tamil",
+          "status": "PASS",
+          "duration_ms": 1249,
+          "audio_bytes": 32300,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-043",
+          "name": "Voice: Vishnu (Telugu male)",
+          "category": "Voices & Languages",
+          "subcategory": "Telugu",
+          "status": "PASS",
+          "duration_ms": 1515,
+          "audio_bytes": 44396,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-044",
+          "name": "Voice: Lakshmi (Telugu female)",
+          "category": "Voices & Languages",
+          "subcategory": "Telugu",
+          "status": "PASS",
+          "duration_ms": 1485,
+          "audio_bytes": 43244,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-045",
+          "name": "Voice: Salman (Urdu male)",
+          "category": "Voices & Languages",
+          "subcategory": "Urdu",
+          "status": "PASS",
+          "duration_ms": 1517,
+          "audio_bytes": 45548,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "V-046",
+          "name": "Voice: Fatima (Urdu female)",
+          "category": "Voices & Languages",
+          "subcategory": "Urdu",
+          "status": "PASS",
+          "duration_ms": 1503,
+          "audio_bytes": 44396,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "F-001",
+          "name": "Format: pcm",
+          "category": "Output Formats",
+          "subcategory": "PCM",
+          "status": "PASS",
+          "duration_ms": 1528,
+          "audio_bytes": 89600,
+          "audio_duration_sec": 0,
+          "output_format": "pcm",
+          "error": "",
+          "notes": "reported_format=pcm",
+          "audio_url": ""
+        },
+        {
+          "id": "F-002",
+          "name": "Format: wav",
+          "category": "Output Formats",
+          "subcategory": "WAV",
+          "status": "PASS",
+          "duration_ms": 1451,
+          "audio_bytes": 89644,
+          "audio_duration_sec": 0,
+          "output_format": "wav",
+          "error": "",
+          "notes": "reported_format=wav",
+          "audio_url": ""
+        },
+        {
+          "id": "F-003",
+          "name": "Format: mp3",
+          "category": "Output Formats",
+          "subcategory": "MP3",
+          "status": "PASS",
+          "duration_ms": 1507,
+          "audio_bytes": 46124,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "reported_format=mp3",
+          "audio_url": ""
+        },
+        {
+          "id": "F-004",
+          "name": "Format: ogg_opus",
+          "category": "Output Formats",
+          "subcategory": "OGG_OPUS",
+          "status": "PASS",
+          "duration_ms": 1499,
+          "audio_bytes": 30105,
+          "audio_duration_sec": 0,
+          "output_format": "ogg_opus",
+          "error": "",
+          "notes": "reported_format=ogg_opus",
+          "audio_url": ""
+        },
+        {
+          "id": "F-005",
+          "name": "Format: flac",
+          "category": "Output Formats",
+          "subcategory": "FLAC",
+          "status": "PASS",
+          "duration_ms": 1408,
+          "audio_bytes": 47382,
+          "audio_duration_sec": 0,
+          "output_format": "flac",
+          "error": "",
+          "notes": "reported_format=flac",
+          "audio_url": ""
+        },
+        {
+          "id": "F-006",
+          "name": "Format: mulaw",
+          "category": "Output Formats",
+          "subcategory": "MULAW",
+          "status": "PASS",
+          "duration_ms": 1367,
+          "audio_bytes": 22400,
+          "audio_duration_sec": 0,
+          "output_format": "mulaw",
+          "error": "",
+          "notes": "reported_format=mulaw",
+          "audio_url": ""
+        },
+        {
+          "id": "F-007",
+          "name": "Format: alaw",
+          "category": "Output Formats",
+          "subcategory": "ALAW",
+          "status": "PASS",
+          "duration_ms": 1378,
+          "audio_bytes": 22400,
+          "audio_duration_sec": 0,
+          "output_format": "alaw",
+          "error": "",
+          "notes": "reported_format=alaw",
+          "audio_url": ""
+        },
+        {
+          "id": "SP-001",
+          "name": "Speed: 0.25x",
+          "category": "Speed Control",
+          "subcategory": "0.25x",
+          "status": "PASS",
+          "duration_ms": 1904,
+          "audio_bytes": 127360,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "speed=0.25x",
+          "audio_url": ""
+        },
+        {
+          "id": "SP-002",
+          "name": "Speed: 0.5x",
+          "category": "Speed Control",
+          "subcategory": "0.5x",
+          "status": "PASS",
+          "duration_ms": 2016,
+          "audio_bytes": 127916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "speed=0.5x",
+          "audio_url": ""
+        },
+        {
+          "id": "SP-003",
+          "name": "Speed: 1.0x",
+          "category": "Speed Control",
+          "subcategory": "1.0x",
+          "status": "PASS",
+          "duration_ms": 1845,
+          "audio_bytes": 65132,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "speed=1.0x",
+          "audio_url": ""
+        },
+        {
+          "id": "SP-004",
+          "name": "Speed: 1.5x",
+          "category": "Speed Control",
+          "subcategory": "1.5x",
+          "status": "PASS",
+          "duration_ms": 1916,
+          "audio_bytes": 43820,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "speed=1.5x",
+          "audio_url": ""
+        },
+        {
+          "id": "SP-005",
+          "name": "Speed: 2.0x",
+          "category": "Speed Control",
+          "subcategory": "2.0x",
+          "status": "PASS",
+          "duration_ms": 2018,
+          "audio_bytes": 33452,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "speed=2.0x",
+          "audio_url": ""
+        },
+        {
+          "id": "SP-006",
+          "name": "Speed: 4.0x",
+          "category": "Speed Control",
+          "subcategory": "4.0x",
+          "status": "PASS",
+          "duration_ms": 1945,
+          "audio_bytes": 17324,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "speed=4.0x",
+          "audio_url": ""
+        },
+        {
+          "id": "E-001",
+          "name": "Expression: Happy",
+          "category": "Expression Styles",
+          "subcategory": "Happy",
+          "status": "PASS",
+          "duration_ms": 1818,
+          "audio_bytes": 62252,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Happy",
+          "audio_url": ""
+        },
+        {
+          "id": "E-002",
+          "name": "Expression: Sad",
+          "category": "Expression Styles",
+          "subcategory": "Sad",
+          "status": "PASS",
+          "duration_ms": 1644,
+          "audio_bytes": 54764,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Sad",
+          "audio_url": ""
+        },
+        {
+          "id": "E-003",
+          "name": "Expression: Angry",
+          "category": "Expression Styles",
+          "subcategory": "Angry",
+          "status": "PASS",
+          "duration_ms": 1493,
+          "audio_bytes": 46124,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Angry",
+          "audio_url": ""
+        },
+        {
+          "id": "E-004",
+          "name": "Expression: Fearful",
+          "category": "Expression Styles",
+          "subcategory": "Fearful",
+          "status": "PASS",
+          "duration_ms": 1511,
+          "audio_bytes": 47276,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Fearful",
+          "audio_url": ""
+        },
+        {
+          "id": "E-005",
+          "name": "Expression: Surprised",
+          "category": "Expression Styles",
+          "subcategory": "Surprised",
+          "status": "PASS",
+          "duration_ms": 1402,
+          "audio_bytes": 40940,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Surprised",
+          "audio_url": ""
+        },
+        {
+          "id": "E-006",
+          "name": "Expression: Disgust",
+          "category": "Expression Styles",
+          "subcategory": "Disgust",
+          "status": "PASS",
+          "duration_ms": 1693,
+          "audio_bytes": 57644,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Disgust",
+          "audio_url": ""
+        },
+        {
+          "id": "E-007",
+          "name": "Expression: News",
+          "category": "Expression Styles",
+          "subcategory": "News",
+          "status": "PASS",
+          "duration_ms": 1447,
+          "audio_bytes": 43820,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=News",
+          "audio_url": ""
+        },
+        {
+          "id": "E-008",
+          "name": "Expression: Conversational",
+          "category": "Expression Styles",
+          "subcategory": "Conversational",
+          "status": "PASS",
+          "duration_ms": 1545,
+          "audio_bytes": 49004,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Conversational",
+          "audio_url": ""
+        },
+        {
+          "id": "E-009",
+          "name": "Expression: Narrative",
+          "category": "Expression Styles",
+          "subcategory": "Narrative",
+          "status": "PASS",
+          "duration_ms": 1710,
+          "audio_bytes": 58220,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Narrative",
+          "audio_url": ""
+        },
+        {
+          "id": "E-010",
+          "name": "Expression: Enthusiastic",
+          "category": "Expression Styles",
+          "subcategory": "Enthusiastic",
+          "status": "PASS",
+          "duration_ms": 1790,
+          "audio_bytes": 62828,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Enthusiastic",
+          "audio_url": ""
+        },
+        {
+          "id": "E-011",
+          "name": "Expression: Neutral",
+          "category": "Expression Styles",
+          "subcategory": "Neutral",
+          "status": "PASS",
+          "duration_ms": 1905,
+          "audio_bytes": 69164,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "expression=Neutral",
+          "audio_url": ""
+        },
+        {
+          "id": "T-001",
+          "name": "Trim: OFF (baseline)",
+          "category": "Silence Trimming",
+          "subcategory": "Off",
+          "status": "PASS",
+          "duration_ms": 1875,
+          "audio_bytes": 67436,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "T-002",
+          "name": "Trim: ON",
+          "category": "Silence Trimming",
+          "subcategory": "On",
+          "status": "PASS",
+          "duration_ms": 1861,
+          "audio_bytes": 63404,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "Reduced by 4032B (6.0%)",
+          "audio_url": ""
+        },
+        {
+          "id": "N-001",
+          "name": "Normalization: none",
+          "category": "Volume Normalization",
+          "subcategory": "None",
+          "status": "PASS",
+          "duration_ms": 1727,
+          "audio_bytes": 58796,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "normalization=none",
+          "audio_url": ""
+        },
+        {
+          "id": "N-002",
+          "name": "Normalization: peak",
+          "category": "Volume Normalization",
+          "subcategory": "Peak",
+          "status": "PASS",
+          "duration_ms": 1721,
+          "audio_bytes": 58796,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "normalization=peak",
+          "audio_url": ""
+        },
+        {
+          "id": "N-003",
+          "name": "Normalization: loudness",
+          "category": "Volume Normalization",
+          "subcategory": "Loudness",
+          "status": "PASS",
+          "duration_ms": 1724,
+          "audio_bytes": 58796,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "normalization=loudness",
+          "audio_url": ""
+        },
+        {
+          "id": "TS-001",
+          "name": "Timestamps: OFF",
+          "category": "Word Timestamps",
+          "subcategory": "Off",
+          "status": "PASS",
+          "duration_ms": 1366,
+          "audio_bytes": 39788,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "timestamps=None",
+          "audio_url": ""
+        },
+        {
+          "id": "TS-002",
+          "name": "Timestamps: ON",
+          "category": "Word Timestamps",
+          "subcategory": "On",
+          "status": "PASS",
+          "duration_ms": 3073,
+          "audio_bytes": 39788,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "0 word timestamps (raw endpoint returns binary only)",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-001",
+          "name": "Background: None (baseline)",
+          "category": "Background Audio",
+          "subcategory": "Baseline",
+          "status": "PASS",
+          "duration_ms": 1670,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-002",
+          "name": "Background: office preset",
+          "category": "Background Audio",
+          "subcategory": "Presets",
+          "status": "PASS",
+          "duration_ms": 1731,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "preset=office, vol=0.2",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-003",
+          "name": "Background: cafe preset",
+          "category": "Background Audio",
+          "subcategory": "Presets",
+          "status": "PASS",
+          "duration_ms": 1660,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "preset=cafe, vol=0.2",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-004",
+          "name": "Background: nature preset",
+          "category": "Background Audio",
+          "subcategory": "Presets",
+          "status": "PASS",
+          "duration_ms": 1691,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "preset=nature, vol=0.2",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-005",
+          "name": "Background: music preset",
+          "category": "Background Audio",
+          "subcategory": "Presets",
+          "status": "PASS",
+          "duration_ms": 1771,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "preset=music, vol=0.2",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-006",
+          "name": "Background: rain preset",
+          "category": "Background Audio",
+          "subcategory": "Presets",
+          "status": "PASS",
+          "duration_ms": 1668,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "preset=rain, vol=0.2",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-007",
+          "name": "Background: volume=0.05",
+          "category": "Background Audio",
+          "subcategory": "Volume",
+          "status": "PASS",
+          "duration_ms": 1689,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "volume=0.05",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-008",
+          "name": "Background: volume=0.1",
+          "category": "Background Audio",
+          "subcategory": "Volume",
+          "status": "PASS",
+          "duration_ms": 1763,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "volume=0.1",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-009",
+          "name": "Background: volume=0.3",
+          "category": "Background Audio",
+          "subcategory": "Volume",
+          "status": "PASS",
+          "duration_ms": 1741,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "volume=0.3",
+          "audio_url": ""
+        },
+        {
+          "id": "BG-010",
+          "name": "Background: volume=0.5",
+          "category": "Background Audio",
+          "subcategory": "Volume",
+          "status": "PASS",
+          "duration_ms": 1742,
+          "audio_bytes": 55916,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "volume=0.5",
+          "audio_url": ""
+        },
+        {
+          "id": "EC-001",
+          "name": "Edge: Single word",
+          "category": "Edge Cases",
+          "subcategory": "Input",
+          "status": "PASS",
+          "duration_ms": 1026,
+          "audio_bytes": 16748,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "EC-002",
+          "name": "Edge: Numbers & special chars",
+          "category": "Edge Cases",
+          "subcategory": "Input",
+          "status": "PASS",
+          "duration_ms": 4232,
+          "audio_bytes": 195884,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "EC-003",
+          "name": "Edge: Heavy punctuation",
+          "category": "Edge Cases",
+          "subcategory": "Input",
+          "status": "PASS",
+          "duration_ms": 2297,
+          "audio_bytes": 89900,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "EC-004",
+          "name": "Edge: Hindi-English code-switching",
+          "category": "Edge Cases",
+          "subcategory": "Input",
+          "status": "PASS",
+          "duration_ms": 2860,
+          "audio_bytes": 121580,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "",
+          "audio_url": ""
+        },
+        {
+          "id": "EC-005",
+          "name": "Edge: Min speed (0.25x)",
+          "category": "Edge Cases",
+          "subcategory": "Boundaries",
+          "status": "PASS",
+          "duration_ms": 1150,
+          "audio_bytes": 53120,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "speed=0.25 (min)",
+          "audio_url": ""
+        },
+        {
+          "id": "EC-006",
+          "name": "Edge: Max speed (4.0x)",
+          "category": "Edge Cases",
+          "subcategory": "Boundaries",
+          "status": "PASS",
+          "duration_ms": 1268,
+          "audio_bytes": 8108,
+          "audio_duration_sec": 0,
+          "output_format": "mp3",
+          "error": "",
+          "notes": "speed=4.0 (max)",
+          "audio_url": ""
+        },
+        {
+          "id": "EC-007",
+          "name": "Edge: Combined features",
+          "category": "Edge Cases",
+          "subcategory": "Combined",
+          "status": "PASS",
+          "duration_ms": 2414,
+          "audio_bytes": 122806,
+          "audio_duration_sec": 0,
+          "output_format": "wav",
+          "error": "",
+          "notes": "speed=1.5x, trim=on, wav, peak norm, happy expr",
+          "audio_url": ""
+        }
+      ]
     }
   ],
   "current": {
-    "run_id": "2026-03-11T12:25:32.171301",
-    "timestamp": "2026-03-11T12:25:32.171301",
+    "run_id": "2026-03-11T12:42:14.712020",
+    "timestamp": "2026-03-11T12:42:14.712020",
     "total": 105,
     "passed": 105,
     "failed": 0,
     "errors": 0,
     "pass_rate": 100.0,
-    "total_ms": 194267,
-    "avg_latency": 1850,
+    "total_ms": 192941,
+    "avg_latency": 1838,
     "categories": [
       {
         "name": "Batch Synthesis",
@@ -3021,9 +4627,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 2728,
-        "min_latency": 1438,
-        "max_latency": 7002
+        "avg_latency": 2749,
+        "min_latency": 1458,
+        "max_latency": 7048
       },
       {
         "name": "Streaming Synthesis",
@@ -3032,9 +4638,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 4003,
-        "min_latency": 3882,
-        "max_latency": 4205
+        "avg_latency": 3888,
+        "min_latency": 3849,
+        "max_latency": 3914
       },
       {
         "name": "Voices & Languages",
@@ -3043,9 +4649,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 1566,
-        "min_latency": 1288,
-        "max_latency": 2388
+        "avg_latency": 1555,
+        "min_latency": 1249,
+        "max_latency": 2376
       },
       {
         "name": "Output Formats",
@@ -3054,9 +4660,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 1489,
-        "min_latency": 1413,
-        "max_latency": 1589
+        "avg_latency": 1448,
+        "min_latency": 1367,
+        "max_latency": 1528
       },
       {
         "name": "Speed Control",
@@ -3065,9 +4671,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 1920,
-        "min_latency": 1842,
-        "max_latency": 2103
+        "avg_latency": 1941,
+        "min_latency": 1845,
+        "max_latency": 2018
       },
       {
         "name": "Expression Styles",
@@ -3076,9 +4682,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 1642,
-        "min_latency": 1417,
-        "max_latency": 1946
+        "avg_latency": 1633,
+        "min_latency": 1402,
+        "max_latency": 1905
       },
       {
         "name": "Silence Trimming",
@@ -3087,9 +4693,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 1907,
-        "min_latency": 1889,
-        "max_latency": 1925
+        "avg_latency": 1868,
+        "min_latency": 1861,
+        "max_latency": 1875
       },
       {
         "name": "Volume Normalization",
@@ -3098,9 +4704,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 1716,
-        "min_latency": 1714,
-        "max_latency": 1718
+        "avg_latency": 1724,
+        "min_latency": 1721,
+        "max_latency": 1727
       },
       {
         "name": "Word Timestamps",
@@ -3109,9 +4715,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 2298,
-        "min_latency": 1469,
-        "max_latency": 3127
+        "avg_latency": 2220,
+        "min_latency": 1366,
+        "max_latency": 3073
       },
       {
         "name": "Background Audio",
@@ -3120,9 +4726,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 1706,
-        "min_latency": 1662,
-        "max_latency": 1786
+        "avg_latency": 1712,
+        "min_latency": 1660,
+        "max_latency": 1771
       },
       {
         "name": "Edge Cases",
@@ -3131,9 +4737,9 @@
         "fail": 0,
         "error": 0,
         "pass_rate": 100.0,
-        "avg_latency": 2174,
-        "min_latency": 959,
-        "max_latency": 4238
+        "avg_latency": 2178,
+        "min_latency": 1026,
+        "max_latency": 4232
       }
     ],
     "tests": [
@@ -3143,12 +4749,13 @@
         "category": "Batch Synthesis",
         "subcategory": "Core",
         "status": "PASS",
-        "duration_ms": 2920,
+        "duration_ms": 2999,
         "audio_bytes": 54764,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "B-002",
@@ -3156,12 +4763,13 @@
         "category": "Batch Synthesis",
         "subcategory": "Core",
         "status": "PASS",
-        "duration_ms": 1547,
+        "duration_ms": 1534,
         "audio_bytes": 46124,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "B-003",
@@ -3169,12 +4777,13 @@
         "category": "Batch Synthesis",
         "subcategory": "Core",
         "status": "PASS",
-        "duration_ms": 1656,
+        "duration_ms": 1653,
         "audio_bytes": 51884,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "B-004",
@@ -3182,12 +4791,13 @@
         "category": "Batch Synthesis",
         "subcategory": "Core",
         "status": "PASS",
-        "duration_ms": 1806,
+        "duration_ms": 1801,
         "audio_bytes": 58796,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "B-005",
@@ -3195,12 +4805,13 @@
         "category": "Batch Synthesis",
         "subcategory": "Core",
         "status": "PASS",
-        "duration_ms": 1438,
+        "duration_ms": 1458,
         "audio_bytes": 40364,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "B-006",
@@ -3208,12 +4819,13 @@
         "category": "Batch Synthesis",
         "subcategory": "Core",
         "status": "PASS",
-        "duration_ms": 7002,
+        "duration_ms": 7048,
         "audio_bytes": 331244,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "S-001",
@@ -3221,12 +4833,13 @@
         "category": "Streaming Synthesis",
         "subcategory": "WebSocket",
         "status": "PASS",
-        "duration_ms": 4050,
+        "duration_ms": 3901,
         "audio_bytes": 44484,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "3 chunks"
+        "notes": "3 chunks",
+        "audio_url": ""
       },
       {
         "id": "S-002",
@@ -3234,12 +4847,13 @@
         "category": "Streaming Synthesis",
         "subcategory": "WebSocket",
         "status": "PASS",
-        "duration_ms": 4205,
+        "duration_ms": 3914,
         "audio_bytes": 45060,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "3 chunks, last is_final=True"
+        "notes": "3 chunks, last is_final=True",
+        "audio_url": ""
       },
       {
         "id": "S-003",
@@ -3247,12 +4861,13 @@
         "category": "Streaming Synthesis",
         "subcategory": "WebSocket",
         "status": "PASS",
-        "duration_ms": 3882,
+        "duration_ms": 3849,
         "audio_bytes": 40408,
         "audio_duration_sec": 2.32,
         "output_format": "mp3",
         "error": "",
-        "notes": "status=complete, chunks=2"
+        "notes": "status=complete, chunks=2",
+        "audio_url": ""
       },
       {
         "id": "S-004",
@@ -3260,12 +4875,13 @@
         "category": "Streaming Synthesis",
         "subcategory": "WebSocket",
         "status": "PASS",
-        "duration_ms": 3887,
+        "duration_ms": 3872,
         "audio_bytes": 48516,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "3 chunks"
+        "notes": "3 chunks",
+        "audio_url": ""
       },
       {
         "id": "S-005",
@@ -3273,12 +4889,13 @@
         "category": "Streaming Synthesis",
         "subcategory": "WebSocket",
         "status": "PASS",
-        "duration_ms": 3993,
+        "duration_ms": 3905,
         "audio_bytes": 55428,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "3 chunks"
+        "notes": "3 chunks",
+        "audio_url": ""
       },
       {
         "id": "V-001",
@@ -3286,12 +4903,13 @@
         "category": "Voices & Languages",
         "subcategory": "Assamese",
         "status": "PASS",
-        "duration_ms": 2388,
+        "duration_ms": 2376,
         "audio_bytes": 42668,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-002",
@@ -3299,12 +4917,13 @@
         "category": "Voices & Languages",
         "subcategory": "Assamese",
         "status": "PASS",
-        "duration_ms": 1447,
+        "duration_ms": 1438,
         "audio_bytes": 36908,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-003",
@@ -3312,12 +4931,13 @@
         "category": "Voices & Languages",
         "subcategory": "Bengali",
         "status": "PASS",
-        "duration_ms": 1534,
+        "duration_ms": 1526,
         "audio_bytes": 42092,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-004",
@@ -3325,12 +4945,13 @@
         "category": "Voices & Languages",
         "subcategory": "Bengali",
         "status": "PASS",
-        "duration_ms": 1347,
+        "duration_ms": 1341,
         "audio_bytes": 34604,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-005",
@@ -3338,12 +4959,13 @@
         "category": "Voices & Languages",
         "subcategory": "Bodo",
         "status": "PASS",
-        "duration_ms": 1657,
+        "duration_ms": 1645,
         "audio_bytes": 49004,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-006",
@@ -3351,12 +4973,13 @@
         "category": "Voices & Languages",
         "subcategory": "Bodo",
         "status": "PASS",
-        "duration_ms": 1453,
+        "duration_ms": 1445,
         "audio_bytes": 40364,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-007",
@@ -3369,7 +4992,8 @@
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-008",
@@ -3377,12 +5001,13 @@
         "category": "Voices & Languages",
         "subcategory": "Dogri",
         "status": "PASS",
-        "duration_ms": 1491,
+        "duration_ms": 1492,
         "audio_bytes": 42668,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-009",
@@ -3390,12 +5015,13 @@
         "category": "Voices & Languages",
         "subcategory": "English",
         "status": "PASS",
-        "duration_ms": 1288,
+        "duration_ms": 1279,
         "audio_bytes": 32300,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-010",
@@ -3403,12 +5029,13 @@
         "category": "Voices & Languages",
         "subcategory": "English",
         "status": "PASS",
-        "duration_ms": 1430,
+        "duration_ms": 1432,
         "audio_bytes": 39212,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-011",
@@ -3416,12 +5043,13 @@
         "category": "Voices & Languages",
         "subcategory": "Gujarati",
         "status": "PASS",
-        "duration_ms": 1712,
+        "duration_ms": 1711,
         "audio_bytes": 54188,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-012",
@@ -3429,12 +5057,13 @@
         "category": "Voices & Languages",
         "subcategory": "Gujarati",
         "status": "PASS",
-        "duration_ms": 1589,
+        "duration_ms": 1583,
         "audio_bytes": 47276,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-013",
@@ -3442,12 +5071,13 @@
         "category": "Voices & Languages",
         "subcategory": "Hindi",
         "status": "PASS",
-        "duration_ms": 1707,
+        "duration_ms": 1674,
         "audio_bytes": 51884,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-014",
@@ -3455,12 +5085,13 @@
         "category": "Voices & Languages",
         "subcategory": "Hindi",
         "status": "PASS",
-        "duration_ms": 1650,
+        "duration_ms": 1653,
         "audio_bytes": 50732,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-015",
@@ -3468,12 +5099,13 @@
         "category": "Voices & Languages",
         "subcategory": "Kannada",
         "status": "PASS",
-        "duration_ms": 1484,
+        "duration_ms": 1475,
         "audio_bytes": 42668,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-016",
@@ -3481,12 +5113,13 @@
         "category": "Voices & Languages",
         "subcategory": "Kannada",
         "status": "PASS",
-        "duration_ms": 1456,
+        "duration_ms": 1440,
         "audio_bytes": 40940,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-017",
@@ -3494,12 +5127,13 @@
         "category": "Voices & Languages",
         "subcategory": "Kashmiri",
         "status": "PASS",
-        "duration_ms": 1656,
+        "duration_ms": 1693,
         "audio_bytes": 50732,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-018",
@@ -3507,12 +5141,13 @@
         "category": "Voices & Languages",
         "subcategory": "Kashmiri",
         "status": "PASS",
-        "duration_ms": 1574,
+        "duration_ms": 1545,
         "audio_bytes": 46124,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-019",
@@ -3520,12 +5155,13 @@
         "category": "Voices & Languages",
         "subcategory": "Konkani",
         "status": "PASS",
-        "duration_ms": 1455,
+        "duration_ms": 1444,
         "audio_bytes": 40940,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-020",
@@ -3538,7 +5174,8 @@
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-021",
@@ -3546,12 +5183,13 @@
         "category": "Voices & Languages",
         "subcategory": "Maithili",
         "status": "PASS",
-        "duration_ms": 1603,
+        "duration_ms": 1573,
         "audio_bytes": 47852,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-022",
@@ -3559,12 +5197,13 @@
         "category": "Voices & Languages",
         "subcategory": "Maithili",
         "status": "PASS",
-        "duration_ms": 1535,
+        "duration_ms": 1507,
         "audio_bytes": 42668,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-023",
@@ -3572,12 +5211,13 @@
         "category": "Voices & Languages",
         "subcategory": "Malayalam",
         "status": "PASS",
-        "duration_ms": 1654,
+        "duration_ms": 1666,
         "audio_bytes": 51884,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-024",
@@ -3585,12 +5225,13 @@
         "category": "Voices & Languages",
         "subcategory": "Malayalam",
         "status": "PASS",
-        "duration_ms": 1539,
+        "duration_ms": 1531,
         "audio_bytes": 45548,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-025",
@@ -3598,12 +5239,13 @@
         "category": "Voices & Languages",
         "subcategory": "Manipuri",
         "status": "PASS",
-        "duration_ms": 1636,
+        "duration_ms": 1631,
         "audio_bytes": 51308,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-026",
@@ -3611,12 +5253,13 @@
         "category": "Voices & Languages",
         "subcategory": "Manipuri",
         "status": "PASS",
-        "duration_ms": 1543,
+        "duration_ms": 1522,
         "audio_bytes": 44396,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-027",
@@ -3624,12 +5267,13 @@
         "category": "Voices & Languages",
         "subcategory": "Marathi",
         "status": "PASS",
-        "duration_ms": 1752,
+        "duration_ms": 1754,
         "audio_bytes": 57068,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-028",
@@ -3637,12 +5281,13 @@
         "category": "Voices & Languages",
         "subcategory": "Marathi",
         "status": "PASS",
-        "duration_ms": 1595,
+        "duration_ms": 1626,
         "audio_bytes": 49004,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-029",
@@ -3650,12 +5295,13 @@
         "category": "Voices & Languages",
         "subcategory": "Nepali",
         "status": "PASS",
-        "duration_ms": 1840,
+        "duration_ms": 1809,
         "audio_bytes": 59372,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-030",
@@ -3663,12 +5309,13 @@
         "category": "Voices & Languages",
         "subcategory": "Nepali",
         "status": "PASS",
-        "duration_ms": 1574,
+        "duration_ms": 1570,
         "audio_bytes": 47276,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-031",
@@ -3676,12 +5323,13 @@
         "category": "Voices & Languages",
         "subcategory": "Odia",
         "status": "PASS",
-        "duration_ms": 1529,
+        "duration_ms": 1525,
         "audio_bytes": 44972,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-032",
@@ -3689,12 +5337,13 @@
         "category": "Voices & Languages",
         "subcategory": "Odia",
         "status": "PASS",
-        "duration_ms": 1621,
+        "duration_ms": 1626,
         "audio_bytes": 49580,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-033",
@@ -3702,12 +5351,13 @@
         "category": "Voices & Languages",
         "subcategory": "Punjabi",
         "status": "PASS",
-        "duration_ms": 1561,
+        "duration_ms": 1550,
         "audio_bytes": 46700,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-034",
@@ -3715,12 +5365,13 @@
         "category": "Voices & Languages",
         "subcategory": "Punjabi",
         "status": "PASS",
-        "duration_ms": 1615,
+        "duration_ms": 1629,
         "audio_bytes": 50156,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-035",
@@ -3728,12 +5379,13 @@
         "category": "Voices & Languages",
         "subcategory": "Sanskrit",
         "status": "PASS",
-        "duration_ms": 1666,
+        "duration_ms": 1672,
         "audio_bytes": 52460,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-036",
@@ -3741,12 +5393,13 @@
         "category": "Voices & Languages",
         "subcategory": "Sanskrit",
         "status": "PASS",
-        "duration_ms": 1576,
+        "duration_ms": 1567,
         "audio_bytes": 47276,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-037",
@@ -3754,12 +5407,13 @@
         "category": "Voices & Languages",
         "subcategory": "Santali",
         "status": "PASS",
-        "duration_ms": 1422,
+        "duration_ms": 1441,
         "audio_bytes": 40940,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-038",
@@ -3767,12 +5421,13 @@
         "category": "Voices & Languages",
         "subcategory": "Santali",
         "status": "PASS",
-        "duration_ms": 1602,
+        "duration_ms": 1611,
         "audio_bytes": 49580,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-039",
@@ -3780,12 +5435,13 @@
         "category": "Voices & Languages",
         "subcategory": "Sindhi",
         "status": "PASS",
-        "duration_ms": 1510,
+        "duration_ms": 1488,
         "audio_bytes": 43244,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-040",
@@ -3793,12 +5449,13 @@
         "category": "Voices & Languages",
         "subcategory": "Sindhi",
         "status": "PASS",
-        "duration_ms": 1537,
+        "duration_ms": 1492,
         "audio_bytes": 43244,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-041",
@@ -3806,12 +5463,13 @@
         "category": "Voices & Languages",
         "subcategory": "Tamil",
         "status": "PASS",
-        "duration_ms": 1437,
+        "duration_ms": 1424,
         "audio_bytes": 40364,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-042",
@@ -3819,12 +5477,13 @@
         "category": "Voices & Languages",
         "subcategory": "Tamil",
         "status": "PASS",
-        "duration_ms": 1331,
+        "duration_ms": 1249,
         "audio_bytes": 32300,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-043",
@@ -3832,12 +5491,13 @@
         "category": "Voices & Languages",
         "subcategory": "Telugu",
         "status": "PASS",
-        "duration_ms": 1547,
+        "duration_ms": 1515,
         "audio_bytes": 44396,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-044",
@@ -3845,12 +5505,13 @@
         "category": "Voices & Languages",
         "subcategory": "Telugu",
         "status": "PASS",
-        "duration_ms": 1488,
+        "duration_ms": 1485,
         "audio_bytes": 43244,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-045",
@@ -3858,12 +5519,13 @@
         "category": "Voices & Languages",
         "subcategory": "Urdu",
         "status": "PASS",
-        "duration_ms": 1570,
+        "duration_ms": 1517,
         "audio_bytes": 45548,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "V-046",
@@ -3871,12 +5533,13 @@
         "category": "Voices & Languages",
         "subcategory": "Urdu",
         "status": "PASS",
-        "duration_ms": 1560,
+        "duration_ms": 1503,
         "audio_bytes": 44396,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "F-001",
@@ -3884,12 +5547,13 @@
         "category": "Output Formats",
         "subcategory": "PCM",
         "status": "PASS",
-        "duration_ms": 1534,
+        "duration_ms": 1528,
         "audio_bytes": 89600,
         "audio_duration_sec": 0,
         "output_format": "pcm",
         "error": "",
-        "notes": "reported_format=pcm"
+        "notes": "reported_format=pcm",
+        "audio_url": ""
       },
       {
         "id": "F-002",
@@ -3897,12 +5561,13 @@
         "category": "Output Formats",
         "subcategory": "WAV",
         "status": "PASS",
-        "duration_ms": 1460,
+        "duration_ms": 1451,
         "audio_bytes": 89644,
         "audio_duration_sec": 0,
         "output_format": "wav",
         "error": "",
-        "notes": "reported_format=wav"
+        "notes": "reported_format=wav",
+        "audio_url": ""
       },
       {
         "id": "F-003",
@@ -3910,12 +5575,13 @@
         "category": "Output Formats",
         "subcategory": "MP3",
         "status": "PASS",
-        "duration_ms": 1589,
+        "duration_ms": 1507,
         "audio_bytes": 46124,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "reported_format=mp3"
+        "notes": "reported_format=mp3",
+        "audio_url": ""
       },
       {
         "id": "F-004",
@@ -3923,12 +5589,13 @@
         "category": "Output Formats",
         "subcategory": "OGG_OPUS",
         "status": "PASS",
-        "duration_ms": 1556,
+        "duration_ms": 1499,
         "audio_bytes": 30105,
         "audio_duration_sec": 0,
         "output_format": "ogg_opus",
         "error": "",
-        "notes": "reported_format=ogg_opus"
+        "notes": "reported_format=ogg_opus",
+        "audio_url": ""
       },
       {
         "id": "F-005",
@@ -3936,12 +5603,13 @@
         "category": "Output Formats",
         "subcategory": "FLAC",
         "status": "PASS",
-        "duration_ms": 1413,
+        "duration_ms": 1408,
         "audio_bytes": 47382,
         "audio_duration_sec": 0,
         "output_format": "flac",
         "error": "",
-        "notes": "reported_format=flac"
+        "notes": "reported_format=flac",
+        "audio_url": ""
       },
       {
         "id": "F-006",
@@ -3949,12 +5617,13 @@
         "category": "Output Formats",
         "subcategory": "MULAW",
         "status": "PASS",
-        "duration_ms": 1437,
+        "duration_ms": 1367,
         "audio_bytes": 22400,
         "audio_duration_sec": 0,
         "output_format": "mulaw",
         "error": "",
-        "notes": "reported_format=mulaw"
+        "notes": "reported_format=mulaw",
+        "audio_url": ""
       },
       {
         "id": "F-007",
@@ -3962,12 +5631,13 @@
         "category": "Output Formats",
         "subcategory": "ALAW",
         "status": "PASS",
-        "duration_ms": 1435,
+        "duration_ms": 1378,
         "audio_bytes": 22400,
         "audio_duration_sec": 0,
         "output_format": "alaw",
         "error": "",
-        "notes": "reported_format=alaw"
+        "notes": "reported_format=alaw",
+        "audio_url": ""
       },
       {
         "id": "SP-001",
@@ -3975,12 +5645,13 @@
         "category": "Speed Control",
         "subcategory": "0.25x",
         "status": "PASS",
-        "duration_ms": 1890,
+        "duration_ms": 1904,
         "audio_bytes": 127360,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "speed=0.25x"
+        "notes": "speed=0.25x",
+        "audio_url": ""
       },
       {
         "id": "SP-002",
@@ -3988,12 +5659,13 @@
         "category": "Speed Control",
         "subcategory": "0.5x",
         "status": "PASS",
-        "duration_ms": 2103,
+        "duration_ms": 2016,
         "audio_bytes": 127916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "speed=0.5x"
+        "notes": "speed=0.5x",
+        "audio_url": ""
       },
       {
         "id": "SP-003",
@@ -4001,12 +5673,13 @@
         "category": "Speed Control",
         "subcategory": "1.0x",
         "status": "PASS",
-        "duration_ms": 1842,
+        "duration_ms": 1845,
         "audio_bytes": 65132,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "speed=1.0x"
+        "notes": "speed=1.0x",
+        "audio_url": ""
       },
       {
         "id": "SP-004",
@@ -4014,12 +5687,13 @@
         "category": "Speed Control",
         "subcategory": "1.5x",
         "status": "PASS",
-        "duration_ms": 1908,
+        "duration_ms": 1916,
         "audio_bytes": 43820,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "speed=1.5x"
+        "notes": "speed=1.5x",
+        "audio_url": ""
       },
       {
         "id": "SP-005",
@@ -4027,12 +5701,13 @@
         "category": "Speed Control",
         "subcategory": "2.0x",
         "status": "PASS",
-        "duration_ms": 1888,
+        "duration_ms": 2018,
         "audio_bytes": 33452,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "speed=2.0x"
+        "notes": "speed=2.0x",
+        "audio_url": ""
       },
       {
         "id": "SP-006",
@@ -4040,12 +5715,13 @@
         "category": "Speed Control",
         "subcategory": "4.0x",
         "status": "PASS",
-        "duration_ms": 1891,
+        "duration_ms": 1945,
         "audio_bytes": 17324,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "speed=4.0x"
+        "notes": "speed=4.0x",
+        "audio_url": ""
       },
       {
         "id": "E-001",
@@ -4053,12 +5729,13 @@
         "category": "Expression Styles",
         "subcategory": "Happy",
         "status": "PASS",
-        "duration_ms": 1776,
+        "duration_ms": 1818,
         "audio_bytes": 62252,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Happy"
+        "notes": "expression=Happy",
+        "audio_url": ""
       },
       {
         "id": "E-002",
@@ -4066,12 +5743,13 @@
         "category": "Expression Styles",
         "subcategory": "Sad",
         "status": "PASS",
-        "duration_ms": 1647,
+        "duration_ms": 1644,
         "audio_bytes": 54764,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Sad"
+        "notes": "expression=Sad",
+        "audio_url": ""
       },
       {
         "id": "E-003",
@@ -4079,12 +5757,13 @@
         "category": "Expression Styles",
         "subcategory": "Angry",
         "status": "PASS",
-        "duration_ms": 1502,
+        "duration_ms": 1493,
         "audio_bytes": 46124,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Angry"
+        "notes": "expression=Angry",
+        "audio_url": ""
       },
       {
         "id": "E-004",
@@ -4092,12 +5771,13 @@
         "category": "Expression Styles",
         "subcategory": "Fearful",
         "status": "PASS",
-        "duration_ms": 1512,
+        "duration_ms": 1511,
         "audio_bytes": 47276,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Fearful"
+        "notes": "expression=Fearful",
+        "audio_url": ""
       },
       {
         "id": "E-005",
@@ -4105,12 +5785,13 @@
         "category": "Expression Styles",
         "subcategory": "Surprised",
         "status": "PASS",
-        "duration_ms": 1417,
+        "duration_ms": 1402,
         "audio_bytes": 40940,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Surprised"
+        "notes": "expression=Surprised",
+        "audio_url": ""
       },
       {
         "id": "E-006",
@@ -4118,12 +5799,13 @@
         "category": "Expression Styles",
         "subcategory": "Disgust",
         "status": "PASS",
-        "duration_ms": 1681,
+        "duration_ms": 1693,
         "audio_bytes": 57644,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Disgust"
+        "notes": "expression=Disgust",
+        "audio_url": ""
       },
       {
         "id": "E-007",
@@ -4131,12 +5813,13 @@
         "category": "Expression Styles",
         "subcategory": "News",
         "status": "PASS",
-        "duration_ms": 1451,
+        "duration_ms": 1447,
         "audio_bytes": 43820,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=News"
+        "notes": "expression=News",
+        "audio_url": ""
       },
       {
         "id": "E-008",
@@ -4144,12 +5827,13 @@
         "category": "Expression Styles",
         "subcategory": "Conversational",
         "status": "PASS",
-        "duration_ms": 1535,
+        "duration_ms": 1545,
         "audio_bytes": 49004,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Conversational"
+        "notes": "expression=Conversational",
+        "audio_url": ""
       },
       {
         "id": "E-009",
@@ -4157,12 +5841,13 @@
         "category": "Expression Styles",
         "subcategory": "Narrative",
         "status": "PASS",
-        "duration_ms": 1755,
+        "duration_ms": 1710,
         "audio_bytes": 58220,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Narrative"
+        "notes": "expression=Narrative",
+        "audio_url": ""
       },
       {
         "id": "E-010",
@@ -4170,12 +5855,13 @@
         "category": "Expression Styles",
         "subcategory": "Enthusiastic",
         "status": "PASS",
-        "duration_ms": 1843,
+        "duration_ms": 1790,
         "audio_bytes": 62828,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Enthusiastic"
+        "notes": "expression=Enthusiastic",
+        "audio_url": ""
       },
       {
         "id": "E-011",
@@ -4183,12 +5869,13 @@
         "category": "Expression Styles",
         "subcategory": "Neutral",
         "status": "PASS",
-        "duration_ms": 1946,
+        "duration_ms": 1905,
         "audio_bytes": 69164,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "expression=Neutral"
+        "notes": "expression=Neutral",
+        "audio_url": ""
       },
       {
         "id": "T-001",
@@ -4196,12 +5883,13 @@
         "category": "Silence Trimming",
         "subcategory": "Off",
         "status": "PASS",
-        "duration_ms": 1925,
+        "duration_ms": 1875,
         "audio_bytes": 67436,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "T-002",
@@ -4209,12 +5897,13 @@
         "category": "Silence Trimming",
         "subcategory": "On",
         "status": "PASS",
-        "duration_ms": 1889,
+        "duration_ms": 1861,
         "audio_bytes": 63404,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "Reduced by 4032B (6.0%)"
+        "notes": "Reduced by 4032B (6.0%)",
+        "audio_url": ""
       },
       {
         "id": "N-001",
@@ -4222,12 +5911,13 @@
         "category": "Volume Normalization",
         "subcategory": "None",
         "status": "PASS",
-        "duration_ms": 1714,
+        "duration_ms": 1727,
         "audio_bytes": 58796,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "normalization=none"
+        "notes": "normalization=none",
+        "audio_url": ""
       },
       {
         "id": "N-002",
@@ -4235,12 +5925,13 @@
         "category": "Volume Normalization",
         "subcategory": "Peak",
         "status": "PASS",
-        "duration_ms": 1718,
+        "duration_ms": 1721,
         "audio_bytes": 58796,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "normalization=peak"
+        "notes": "normalization=peak",
+        "audio_url": ""
       },
       {
         "id": "N-003",
@@ -4248,12 +5939,13 @@
         "category": "Volume Normalization",
         "subcategory": "Loudness",
         "status": "PASS",
-        "duration_ms": 1714,
+        "duration_ms": 1724,
         "audio_bytes": 58796,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "normalization=loudness"
+        "notes": "normalization=loudness",
+        "audio_url": ""
       },
       {
         "id": "TS-001",
@@ -4261,12 +5953,13 @@
         "category": "Word Timestamps",
         "subcategory": "Off",
         "status": "PASS",
-        "duration_ms": 1469,
+        "duration_ms": 1366,
         "audio_bytes": 39788,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "timestamps=None"
+        "notes": "timestamps=None",
+        "audio_url": ""
       },
       {
         "id": "TS-002",
@@ -4274,12 +5967,13 @@
         "category": "Word Timestamps",
         "subcategory": "On",
         "status": "PASS",
-        "duration_ms": 3127,
+        "duration_ms": 3073,
         "audio_bytes": 39788,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "0 word timestamps (raw endpoint returns binary only)"
+        "notes": "0 word timestamps (raw endpoint returns binary only)",
+        "audio_url": ""
       },
       {
         "id": "BG-001",
@@ -4287,12 +5981,13 @@
         "category": "Background Audio",
         "subcategory": "Baseline",
         "status": "PASS",
-        "duration_ms": 1669,
+        "duration_ms": 1670,
         "audio_bytes": 55916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "BG-002",
@@ -4300,12 +5995,13 @@
         "category": "Background Audio",
         "subcategory": "Presets",
         "status": "PASS",
-        "duration_ms": 1662,
+        "duration_ms": 1731,
         "audio_bytes": 55916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "preset=office, vol=0.2"
+        "notes": "preset=office, vol=0.2",
+        "audio_url": ""
       },
       {
         "id": "BG-003",
@@ -4313,12 +6009,13 @@
         "category": "Background Audio",
         "subcategory": "Presets",
         "status": "PASS",
-        "duration_ms": 1665,
+        "duration_ms": 1660,
         "audio_bytes": 55916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "preset=cafe, vol=0.2"
+        "notes": "preset=cafe, vol=0.2",
+        "audio_url": ""
       },
       {
         "id": "BG-004",
@@ -4326,12 +6023,13 @@
         "category": "Background Audio",
         "subcategory": "Presets",
         "status": "PASS",
-        "duration_ms": 1722,
+        "duration_ms": 1691,
         "audio_bytes": 55916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "preset=nature, vol=0.2"
+        "notes": "preset=nature, vol=0.2",
+        "audio_url": ""
       },
       {
         "id": "BG-005",
@@ -4339,12 +6037,13 @@
         "category": "Background Audio",
         "subcategory": "Presets",
         "status": "PASS",
-        "duration_ms": 1741,
+        "duration_ms": 1771,
         "audio_bytes": 55916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "preset=music, vol=0.2"
+        "notes": "preset=music, vol=0.2",
+        "audio_url": ""
       },
       {
         "id": "BG-006",
@@ -4352,12 +6051,13 @@
         "category": "Background Audio",
         "subcategory": "Presets",
         "status": "PASS",
-        "duration_ms": 1666,
+        "duration_ms": 1668,
         "audio_bytes": 55916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "preset=rain, vol=0.2"
+        "notes": "preset=rain, vol=0.2",
+        "audio_url": ""
       },
       {
         "id": "BG-007",
@@ -4365,12 +6065,13 @@
         "category": "Background Audio",
         "subcategory": "Volume",
         "status": "PASS",
-        "duration_ms": 1746,
+        "duration_ms": 1689,
         "audio_bytes": 55916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "volume=0.05"
+        "notes": "volume=0.05",
+        "audio_url": ""
       },
       {
         "id": "BG-008",
@@ -4378,12 +6079,13 @@
         "category": "Background Audio",
         "subcategory": "Volume",
         "status": "PASS",
-        "duration_ms": 1662,
+        "duration_ms": 1763,
         "audio_bytes": 55916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "volume=0.1"
+        "notes": "volume=0.1",
+        "audio_url": ""
       },
       {
         "id": "BG-009",
@@ -4391,12 +6093,13 @@
         "category": "Background Audio",
         "subcategory": "Volume",
         "status": "PASS",
-        "duration_ms": 1786,
+        "duration_ms": 1741,
         "audio_bytes": 55916,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "volume=0.3"
+        "notes": "volume=0.3",
+        "audio_url": ""
       },
       {
         "id": "BG-010",
@@ -4409,7 +6112,8 @@
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "volume=0.5"
+        "notes": "volume=0.5",
+        "audio_url": ""
       },
       {
         "id": "EC-001",
@@ -4417,12 +6121,13 @@
         "category": "Edge Cases",
         "subcategory": "Input",
         "status": "PASS",
-        "duration_ms": 959,
+        "duration_ms": 1026,
         "audio_bytes": 16748,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "EC-002",
@@ -4430,12 +6135,13 @@
         "category": "Edge Cases",
         "subcategory": "Input",
         "status": "PASS",
-        "duration_ms": 4238,
+        "duration_ms": 4232,
         "audio_bytes": 195884,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "EC-003",
@@ -4443,12 +6149,13 @@
         "category": "Edge Cases",
         "subcategory": "Input",
         "status": "PASS",
-        "duration_ms": 2288,
+        "duration_ms": 2297,
         "audio_bytes": 89900,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "EC-004",
@@ -4456,12 +6163,13 @@
         "category": "Edge Cases",
         "subcategory": "Input",
         "status": "PASS",
-        "duration_ms": 2868,
+        "duration_ms": 2860,
         "audio_bytes": 121580,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": ""
+        "notes": "",
+        "audio_url": ""
       },
       {
         "id": "EC-005",
@@ -4469,12 +6177,13 @@
         "category": "Edge Cases",
         "subcategory": "Boundaries",
         "status": "PASS",
-        "duration_ms": 1216,
+        "duration_ms": 1150,
         "audio_bytes": 53120,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "speed=0.25 (min)"
+        "notes": "speed=0.25 (min)",
+        "audio_url": ""
       },
       {
         "id": "EC-006",
@@ -4482,12 +6191,13 @@
         "category": "Edge Cases",
         "subcategory": "Boundaries",
         "status": "PASS",
-        "duration_ms": 1242,
+        "duration_ms": 1268,
         "audio_bytes": 8108,
         "audio_duration_sec": 0,
         "output_format": "mp3",
         "error": "",
-        "notes": "speed=4.0 (max)"
+        "notes": "speed=4.0 (max)",
+        "audio_url": ""
       },
       {
         "id": "EC-007",
@@ -4495,12 +6205,13 @@
         "category": "Edge Cases",
         "subcategory": "Combined",
         "status": "PASS",
-        "duration_ms": 2406,
+        "duration_ms": 2414,
         "audio_bytes": 122806,
         "audio_duration_sec": 0,
         "output_format": "wav",
         "error": "",
-        "notes": "speed=1.5x, trim=on, wav, peak norm, happy expr"
+        "notes": "speed=1.5x, trim=on, wav, peak norm, happy expr",
+        "audio_url": ""
       }
     ]
   }

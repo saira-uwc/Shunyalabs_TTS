@@ -310,7 +310,7 @@ function handleAudioUpload(ss, data) {
   }
 
   return ContentService.createTextOutput(
-    JSON.stringify({ success: true, audio_uploaded: uploaded })
+    JSON.stringify({ success: true, audio_uploaded: uploaded, audio_links: audioLinks })
   ).setMimeType(ContentService.MimeType.JSON);
 }
 
